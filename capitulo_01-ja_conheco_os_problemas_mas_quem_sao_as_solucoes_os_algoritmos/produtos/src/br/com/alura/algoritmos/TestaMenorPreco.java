@@ -17,7 +17,7 @@ public class TestaMenorPreco {
 			}
 		}
 		
-		System.out.println("Indice do carro mais barato: " + maisBarato);
-		System.out.println("Preço do carro mais barato: R$ " + produtos[maisBarato].getPreco());
+		System.out.println(maisBarato);
+		System.out.println("O carro " + produtos[maisBarato].getNome() + " é o mais barato, e custa " + produtos[maisBarato].getPreco());
 	}
 }
