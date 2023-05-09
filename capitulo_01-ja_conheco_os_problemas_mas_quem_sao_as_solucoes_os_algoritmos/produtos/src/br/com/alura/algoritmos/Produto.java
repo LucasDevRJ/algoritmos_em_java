@@ -9,4 +9,8 @@ public class Produto {
 		this.nome = nome;
 		this.preco = preco;
 	}
+	
+	public double getPreco() {
+		return preco;
+	}
 }
