@@ -11,13 +11,10 @@ public class TestaMenorPreco {
 		precos[4] = 17000;
 		
 		int maisBarato = 0;
-		int atual = 0;
-		
-		for (int i = 0; i < 4; i++) {
+		for (int atual = 0; atual < 4; atual++) {
 			if (precos[atual] < precos[maisBarato]) {
 				maisBarato = atual;
 			}
-			atual = atual + 1;
 		}
 		
 		System.out.println("Indice do carro mais barato: " + maisBarato);
