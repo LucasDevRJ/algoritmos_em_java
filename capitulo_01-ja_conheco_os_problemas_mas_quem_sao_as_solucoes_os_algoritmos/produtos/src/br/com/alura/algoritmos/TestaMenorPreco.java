@@ -11,14 +11,19 @@ public class TestaMenorPreco {
 			new Produto("Fusca", 17000)
 		};
 		
+		int maisBarato = buscaMenor(produtos);
+		
+		System.out.println(maisBarato);
+		System.out.println("O carro " + produtos[maisBarato].getNome() + " é o mais barato, e custa " + produtos[maisBarato].getPreco());
+	}
+	
+	private static int buscaMenor(Produto[] produtos) {
 		int maisBarato = 0;
 		for (int atual = 0; atual <= 4; atual++) {
 			if (produtos[atual].getPreco() < produtos[maisBarato].getPreco()) {
 				maisBarato = atual;
 			}
 		}
-		
-		System.out.println(maisBarato);
-		System.out.println("O carro " + produtos[maisBarato].getNome() + " é o mais barato, e custa " + produtos[maisBarato].getPreco());
+		return maisBarato;
 	}
 }
