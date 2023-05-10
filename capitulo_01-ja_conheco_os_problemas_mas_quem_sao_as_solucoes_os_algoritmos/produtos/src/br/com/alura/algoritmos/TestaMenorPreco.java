@@ -17,14 +17,8 @@ public class TestaMenorPreco {
 		};
 		
 		int maisBarato = buscaMenor(produtos, 0, 4);
-		int segundoMaisBarato = buscaMenor(produtos, 3, 4);
-		
 		System.out.println(maisBarato);
 		System.out.println("O carro " + produtos[maisBarato].getNome() + " é o mais barato, e custa " + produtos[maisBarato].getPreco());
-		
-		//desafio dos mais baratos
-		System.out.println(segundoMaisBarato);
-		System.out.println("O carro " + produtos[segundoMaisBarato].getNome() + " é o segundo mais barato, e custa " + produtos[segundoMaisBarato].getPreco());
 	}
 
 	private static int buscaMenor(Produto[] produtos, int inicio, int termino) {
