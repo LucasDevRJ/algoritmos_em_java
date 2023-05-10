@@ -30,9 +30,17 @@ public class TestaOrdenacao {
 	
 	private static void ordena(Produto[] produtos, int quantidadeDeElementos) {
 		for (int atual = 0; atual < quantidadeDeElementos - 1; atual++) {
+			System.out.println("Estou na casinha " + atual);
+			
 			int menor = buscaMenor(produtos, atual, quantidadeDeElementos - 1);
+			
+			System.out.println("Trocando o " + atual + " com " + menor);
+			
 			Produto produtoAtual = produtos[atual];
 			Produto produtoMenor = produtos[menor];
+			
+			System.out.println("Trocando o " + produtoAtual.getNome() + " por " + produtoMenor.getNome());
+			
 			produtos[atual] = produtoMenor;
 			produtos[menor] = produtoAtual;
 		}
