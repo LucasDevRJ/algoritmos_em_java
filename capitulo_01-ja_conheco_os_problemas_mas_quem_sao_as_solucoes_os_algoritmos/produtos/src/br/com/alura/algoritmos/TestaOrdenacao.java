@@ -11,13 +11,7 @@ public class TestaOrdenacao {
 				new Produto("Fusca", 17000)
 		};
 		
-		for (int atual = 0; atual < produtos.length; atual++) {
-			int menor = buscaMenor(produtos, atual, produtos.length - 1);
-			Produto produtoAtual = produtos[atual];
-			Produto produtoMenor = produtos[menor];
-			produtos[atual] = produtoMenor;
-			produtos[menor] = produtoAtual;
-		}
+		ordena(produtos, produtos.length);
 		
 		for (Produto produto : produtos) {
 			System.out.println(produto.getNome() + " custa " + produto.getPreco());
@@ -32,5 +26,15 @@ public class TestaOrdenacao {
 			}
 		}
 		return maisBarato;
+	}
+	
+	private static void ordena(Produto[] produtos, int quantidadeDeElementos) {
+		for (int atual = 0; atual < quantidadeDeElementos - 1; atual++) {
+			int menor = buscaMenor(produtos, atual, quantidadeDeElementos - 1);
+			Produto produtoAtual = produtos[atual];
+			Produto produtoMenor = produtos[menor];
+			produtos[atual] = produtoMenor;
+			produtos[menor] = produtoAtual;
+		}
 	}
 }
