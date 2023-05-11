@@ -13,7 +13,9 @@ public class TestaOrdenacao {
 		
 		//selectionSort(produtos, produtos.length);
 		novoSort(produtos, produtos.length);
-		
+	}
+
+	private static void imprime(Produto[] produtos) {
 		for (Produto produto : produtos) {
 			System.out.println(produto.getNome() + " custa " + produto.getPreco());
 		}
@@ -62,6 +64,11 @@ public class TestaOrdenacao {
 				produtos[analise - 1] = produtosAnalise;
 				analise--;
 			}
+			imprime(produtos);
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
 		}
 	}
 }
