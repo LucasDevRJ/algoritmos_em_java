@@ -49,11 +49,14 @@ public class TestaOrdenacao {
 	
 	private static void novoSort(Produto[] produtos, int quantidadeElementos) {
 		for (int atual = 0; atual < quantidadeElementos; atual++) {
+			System.out.println("Estou na casinha " + atual);
 			int analise = atual;
 			
 			while (analise > 0 && produtos[analise].getPreco() < produtos[analise - 1].getPreco()) {
+				System.out.println("Estou trocando " + analise + " com " + (analise - 1));
 				Produto produtosAnalise = produtos[analise];
 				Produto produtoAnaliseMenos1 = produtos[analise - 1];
+				System.out.println("Estou trocando " + produtosAnalise.getNome() + " com " + produtoAnaliseMenos1.getNome());
 				
 				produtos[analise] = produtoAnaliseMenos1;
 				produtos[analise - 1] = produtosAnalise;
