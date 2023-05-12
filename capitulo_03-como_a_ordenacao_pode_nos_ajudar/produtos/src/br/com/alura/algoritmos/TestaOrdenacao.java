@@ -11,8 +11,8 @@ public class TestaOrdenacao {
 				new Produto("Fusca", 17000)
 		};
 		
-		selectionSort(produtos, produtos.length);
-		//novoSort(produtos, produtos.length);
+		//selectionSort(produtos, produtos.length);
+		novoSort(produtos, produtos.length);
 	}
 
 	private static void imprime(Produto[] produtos) {
