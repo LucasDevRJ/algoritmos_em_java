@@ -17,6 +17,9 @@ public class TestaOrdenacao2 {
 		System.out.println("O produto mais caro é o " + produtos[produtoMaisCaro].getNome());
 		System.out.print("Custando R$ " + produtos[produtoMaisCaro].getPreco());
 		
+		System.out.println();
+		System.out.println();
+		
 		//selectionSort(produtos, 4);
 		novoSort(produtos, produtos.length);
 		exibeLista(produtos);
@@ -42,25 +45,23 @@ public class TestaOrdenacao2 {
 		for (int atual = 0; atual < produtos.length; atual++) {
 			int produtoMaisCaro = buscaProdutoMaisCaro(produtos, atual, produtos.length);
 			
-			Produto produtoAtual = produtos[atual];
-			Produto produtoCaro = produtos[produtoMaisCaro];
-			
-			produtos[atual] = produtoCaro;
-			produtos[produtoMaisCaro] = produtoAtual;
+			trocar(produtos, atual, produtoMaisCaro);
 		}
+	}
+
+	private static void trocar(Produto[] produtos, int atual, int produtoMaisCaro) {
+		Produto produtoAtual = produtos[atual];
+		Produto produtoCaro = produtos[produtoMaisCaro];
+		
+		produtos[atual] = produtoCaro;
+		produtos[produtoMaisCaro] = produtoAtual;
 	}
 	 
 	private static void novoSort(Produto[] produtos, int quantidadeElementos) {
 		for (int atual = 0; atual < quantidadeElementos; atual++) {
 			int posterior = atual + 1;
 			while (posterior < quantidadeElementos && produtos[atual].getPreco() > produtos[posterior].getPreco()) {
-				Produto produtoAtual = produtos[atual];
-				Produto produtoAnterior = produtos[posterior];
-				
-				produtos[atual] = produtoAnterior;
-				produtos[posterior] = produtoAtual;
-				
-				System.out.println("Trocando o " + produtoAtual.getNome() + "(" + atual + ") pelo " + produtoAnterior.getNome() + "(" + posterior + ")");
+				trocar(produtos, atual, posterior);
 				
 				posterior++;
 			}
