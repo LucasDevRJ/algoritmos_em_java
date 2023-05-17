@@ -22,4 +22,8 @@
 		<item key="GenerateJavadoc" value="false"/>
 		<item key="AccessModifier" value="2"/>
 	</section>
+	<section name="RenameInformationPopup">
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+	</section>
 </section>
