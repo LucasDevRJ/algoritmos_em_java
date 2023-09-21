@@ -1,11 +1,11 @@
 package br.com.alura.notas;
 
-public class Notas {
+public class Nota {
 
 	private String aluno;
 	private double valor;
 	
-	public Notas(String aluno, double valor) {
+	public Nota(String aluno, double valor) {
 		this.aluno = aluno;
 		this.valor = valor;
 	}
