@@ -49,6 +49,9 @@ public class TestaMerge {
 			}
 			atual++;
 		}
+		System.out.println("Estou Saindo");
+		System.out.println(atualDoAniche < notasDoAniche.length);
+		System.out.println(atualDoAlberto < notasDoAlberto.length);
 		return resultado;
 	}
 }
