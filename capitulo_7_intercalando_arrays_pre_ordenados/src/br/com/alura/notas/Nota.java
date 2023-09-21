@@ -9,4 +9,12 @@ public class Nota {
 		this.aluno = aluno;
 		this.valor = valor;
 	}
+	
+	public String getAluno() {
+		return aluno;
+	}
+	
+	public double getValor() {
+		return valor;
+	}
 }
