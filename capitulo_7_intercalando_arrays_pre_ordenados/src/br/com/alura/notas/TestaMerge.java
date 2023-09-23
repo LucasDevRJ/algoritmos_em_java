@@ -51,6 +51,11 @@ public class TestaMerge {
 		}
 		System.out.println("Estou Saindo");
 		System.out.println(atualDoAniche < notasDoAniche.length);
+		while (atualDoAlberto <  notasDoAlberto.length) {
+			resultado[atual] = notasDoAlberto[atualDoAlberto];
+			atual++;
+			atualDoAlberto++;
+		}
 		System.out.println(atualDoAlberto < notasDoAlberto.length);
 		return resultado;
 	}
