@@ -14,5 +14,45 @@ public class TestaIntercalaEmUmArray {
 				new Nota("Lucia", 9.3),
 				new Nota("Ana", 10.0),
 		};
+		
+		Nota[] rank = intercala(notas, 0, 4, notas.length);
+		for (Nota nota : rank) {
+			System.out.println(nota.getAluno() + " - " + nota.getNota());
+		}	
+	}
+	
+	private static Nota[] intercala(Nota[] notas, int inicial, int miolo, int termino) {
+		Nota[] resultado = new Nota[notas.length];
+		int atual = 0;
+		int atual1 = inicial;
+		int atual2 = miolo;
+		
+		Nota notas1 = notas[atual1];
+		Nota notas2 = notas[atual2];
+		while (atual1 < miolo && atual2 < termino) {
+			if (notas1.getNota() < notas2.getNota()) {
+				resultado[atual] = notas1;
+				atual1++;
+			} else {
+				resultado[atual] = notas2;
+				atual2++;
+			}
+			
+			atual++;
+			
+			while (atual1 < miolo) {
+				resultado[atual] = notas[atual1];
+				atual1++;
+				atual++;
+			}
+			
+			while (atual2 < termino) {
+				resultado[atual] = notas[atual2];
+				atual2++;
+				atual++;
+			}	
+		}
+		
+		return resultado;
 	}
 }
