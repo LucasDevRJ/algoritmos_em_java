@@ -26,10 +26,11 @@ public class TestaIntercalaEmUmArray {
 		int atual = 0;
 		int atual1 = inicial;
 		int atual2 = miolo;
-		
-		Nota notas1 = notas[atual1];
-		Nota notas2 = notas[atual2];
+	
 		while (atual1 < miolo && atual2 < termino) {
+			Nota notas1 = notas[atual1];
+			Nota notas2 = notas[atual2];
+			
 			if (notas1.getNota() < notas2.getNota()) {
 				resultado[atual] = notas1;
 				atual1++;
@@ -37,21 +38,20 @@ public class TestaIntercalaEmUmArray {
 				resultado[atual] = notas2;
 				atual2++;
 			}
-			
 			atual++;
-			
-			while (atual1 < miolo) {
-				resultado[atual] = notas[atual1];
-				atual1++;
-				atual++;
-			}
-			
-			while (atual2 < termino) {
-				resultado[atual] = notas[atual2];
-				atual2++;
-				atual++;
-			}	
 		}
+		
+		while (atual1 < miolo) {
+			resultado[atual] = notas[atual1];
+			atual1++;
+			atual++;
+		}
+		
+		while (atual2 < termino) {
+			resultado[atual] = notas[atual2];
+			atual2++;
+			atual++;
+		}	
 		
 		return resultado;
 	}
